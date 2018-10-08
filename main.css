@@ -1,0 +1,515 @@
+a:link 
+{
+	text-decoration: none;
+}
+
+a:visited 
+{
+    color: inherit;
+}
+
+a:hover 
+{
+    color: inherit;
+}
+
+a:active 
+{    
+	color: inherit;
+}
+
+body {
+    user-select: none;
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Audiowide', cursive;
+    min-width: 960px;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    color: #404040;
+    box-sizing: border-box;
+    
+}
+
+.float {
+    position: absolute;
+    top:100px;
+    left:0px;
+    background-color: black;
+    width: 10em;
+    color: whitesmoke;
+    font-size: 1em;
+    font-family: 'Audiowide', cursive;
+     transition: .4s cubic-bezier(0.68, 0, 0.27, 1.55);
+    text-align: center;
+    padding-bottom: 1.5em;
+border: 1px dashed darkorange;    
+}
+
+
+.float:hover {
+    
+    color: whitesmoke;
+     transition: .8s cubic-bezier(0.68, 0, 0.27, 1.55);
+}
+    
+
+#close {
+    font-size: .7em;
+    cursor: pointer;
+    padding: .5em;
+}
+
+#close:hover {
+    background-color: orangered;
+}
+
+
+
+.outter {
+    display: flex;
+    justify-content: center;
+    padding: 3em;
+    background-color: black;
+    background-image: url(img/real_cf.png)
+}
+
+.gridContainer {
+    min-width: 4fr;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(9, minmax(30vh, max-content));
+    grid-template-areas: 
+        "art1 art10 art10 art2"
+        "art1 art10 art10 art2"
+        "art12 art12 art12 ."
+        ". . art3 ."
+        "art5 art5 art5 art5"
+        " art11 art11 art7 art7"
+        "art6 art6 art6 art6"
+        "art4 art4 art8 art8"
+        ". art9 art9 ."
+        ;
+    grid-auto-flow: row;
+}
+
+.pure {
+    text-align: center;
+    padding: 2em;
+}
+
+
+
+p {
+    padding: 2em;
+    text-align: center;
+}
+
+
+
+
+#art1 {
+    grid-area: art1;
+        background-color: black;
+    background-image:url(img/bmw_front_1.jpg);
+    background-position: right;
+}
+
+#art1::after {
+    background-image: url(img/bmw_all_front.jpg);
+    background-size: cover;
+    background-position:right;
+}
+
+#art1::before {
+    background-image:url(img/bmw_front_2.jpg);
+    background-color: white;
+    background-position: right;
+}
+
+#art2 {
+    grid-area: art2;
+    background-image:url(img/bmw_back_2.jpg);
+    background-color: black;
+    background-position: left;
+    
+}
+
+#art2::before {
+    background-image:url(img/bmw_back_1.jpg);
+    background-color: black;
+    background-position: left;
+}
+
+#art2::after {
+    background-image: url(img/bmw_all_back.jpg);
+    background-size: cover;
+    background-position:left;
+}
+
+#art3 {
+    grid-area: art3;
+    background-color: black;
+    background-image: url(img/2_bmw_both_2.jpg);
+         background-position:  left;
+}
+
+
+#art3::before {
+    background-image: url(img/2_bmw_both_3.jpg);
+     background-position:  left;
+
+}
+
+#art3::after {
+    background-image: url(img/2_bmw_both_1.jpg);
+     background-position:  right;
+
+}
+
+#art4 {
+    display: flex;
+    flex-flow: column;
+    grid-area: art4;
+    font-size: 4em;
+    padding: 0;
+    justify-content: center;
+    font-family: 'Audiowide', cursive;
+    color:orangered;
+    height: 100%;
+}
+
+#art5 {
+    grid-area: art5;
+    margin-top: -2em;
+    padding-top: 3em;
+    background-image: url(img/bmw_concept-m4-gts_coupe-image-012.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    font-size: 2.2em;
+    justify-content: center;
+    font-family: 'Audiowide', cursive;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+#art6 {
+    grid-area: art6;
+      background-image: url(img/bmw_concept-m4-gts_coupe-image-011.jpg);
+    background-size: cover;
+    color: darkorange;
+    font-family: 'Audiowide', cursive;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 4em;
+    background-position: bottom;
+    height: 10em;
+
+}
+
+#art7 {
+    grid-area: art7;
+    display: flex;
+    justify-content: center;
+    color: darkorange;
+}
+
+#art8 {
+    grid-area: art8;
+    color: darkorange;
+    
+}
+
+
+#art8::after {
+    background-image: url(img/bmw_all_front.jpg);
+    background-size: cover;
+    background-position:right;
+    content: "R6";
+    background-color: black;
+}
+
+#art8::before {
+    background-image:url(img/bmw_front_2.jpg);
+    background-color: black;
+    background-position: auto;
+}
+
+#art9 {
+    grid-area: art9;
+}
+
+#art10 {
+    grid-area: art10;
+    font-size: 1.5em;
+    padding: 0;
+    align-self: center;
+    justify-content: center;
+    font-family: 'Audiowide', cursive;
+    color:black;
+        background-color: white;
+    height: 100%;
+    background-image: url(img/bmw_all_center.jpg);
+        background-position:left;
+    background-size: cover;
+  
+    
+}
+
+#art10 p {
+    transition: .4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+
+#art10 p:hover {
+    transform:translateX(3em);
+    color: hotpink;
+}
+
+#art11 {
+    grid-area: art11;
+}
+
+#art11::after {
+    background-image: url(img/bmw_all.jpg);
+    content: 'GO FOR IT!';
+    background-position: center;
+}
+#art11::before {
+    background-image: url(img/bmw_front.jpg);
+}
+
+#art12 {
+    grid-area: art12;
+    font-size: 4em;
+    padding: 0;
+    align-self: center;
+    justify-content: center;
+    font-family: 'Audiowide', cursive;
+    color:darkorange;
+        position: relative;
+}
+
+
+
+
+
+#art12::before {
+    font-size: .5em;
+    color:orangered;
+    position: absolute;
+    content:'';
+    background-color:white;
+    height: 5%;
+    width: 60px;
+    bottom: 0px;
+    transform: translate(-1000px);
+     transition: .4s  cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    
+}
+
+#art12:hover::before {
+    font-size: .5em;
+    color:orangered;
+    position: absolute;
+    height: 5%;
+    width: 60%;
+    bottom: 0;
+    background-color: orangered;
+    transform: translate(0px);
+}
+
+
+
+
+
+
+#player {
+  height: 100%;
+    width: 100%;
+}
+
+
+/************************************** OPEN RIGHT *****************************************/
+.openRight {
+    border: 1px dashed darkorange;
+    perspective: 2500px;
+    perspective-origin: center;
+    background-size: cover;
+    background-position:left;
+    position: relative;
+}
+
+.openRight::after {
+    font-family: 'Russo One', sans-serif;
+    transform-origin: right;
+    transition: .7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    position: absolute;
+    background-size: cover;
+    content:'MPower';
+    font-size: 4em;
+    color: darkorange;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    background-color:whitesmoke;
+    background-position: bottom;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    backface-visibility: hidden;
+    background-image: url(img/jennifer-pallian-306919-unsplash.jpg);
+    align-items:center;
+    justify-content: center;
+font-family: 'Audiowide', cursive;
+
+}
+
+
+
+
+.openRight:hover::after {
+        transform: rotateY(180deg);
+    
+}
+
+.openRight::before {
+    transition: .7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transform-origin: right;
+    position: absolute;
+    background-size: cover;
+    background-image: url(img/alexandra-gorn-260985-unsplash.jpg);
+    content:'';
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    
+}
+
+.openRight:hover::before {
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+/************************************** OPEN LEFT *****************************************/
+.openLeft {
+    grid-area: openL;
+    border: 1px dashed darkorange;
+    perspective: 2500px;
+    perspective-origin: center;
+    background-size: cover;
+    background-position:left;
+    position: relative;
+}
+
+
+.openLeft::after {
+    transform-origin: left;
+    transition: .8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    position: absolute;
+    background-size: cover;
+    content:'M4 GTS';
+    font-size: 4em;
+    color: darkorange;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    background-color:whitesmoke;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    font-family: 'Audiowide', cursive;
+    background-image: url(img/daniel-hjalmarsson-376627-unsplash.jpg);
+    backface-visibility: hidden;
+    align-items:center;
+    justify-content: center;
+}
+
+.openLeft:hover::after {
+        transform: rotateY(-180deg);
+}
+
+.openLeft::before {
+/*    border-right: 1px dashed darkorange;*/
+    transition: .8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transform-origin: left;
+    position: absolute;
+    background-size: cover;
+    background-image: url(img/pineapple-supply-co-244468-unsplash.jpg);
+    content:'';
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+}
+
+.openLeft:hover::before {
+        transform: rotateY(-180deg);
+}
+
+
+
+
+
+/************************************** OPEN BOTH *****************************************/
+.openBoth {
+    grid-area: openB;
+    border: 1px dashed darkorange;
+    perspective: 2500px;
+    perspective-origin: center;
+    background-size: cover;
+    background-position:left;
+    position: relative;
+}
+
+
+.openBoth::after {
+    transform-origin: left;
+    transition: 1.2s cubic-bezier(0.68, -0.35, 0.27, 1.25);
+    position: absolute;
+    background-size: cover;
+    content:'M4';
+    font-size: 4em;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    background-color:whitesmoke;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    font-family: 'Audiowide', cursive;
+    background-image: url(img/jennifer-pallian-306931-unsplash.jpg);
+    align-items:center;
+    justify-content: center;
+    border: 1px dashed darkorange;
+}
+
+.openBoth:hover::after {
+        transform: rotateY(-180deg);
+    transition: .8s cubic-bezier(0.68, -0.35, 0.27, 1.55);
+    
+}
+
+.openBoth::before {
+    transition: .8s cubic-bezier(0.68, -0.35, 0.27, 1.55);
+     
+    transform-origin: right;
+    position: absolute;
+    background-size: cover;
+    background-image: url(img/brooke-lark-325182-unsplash.jpg);
+    content:'';
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    border: 1px dashed darkorange;
+}
+
+.openBoth:hover::before {
+    transform: rotateY(180deg);
+    transition-delay: .3s;
+}
+
